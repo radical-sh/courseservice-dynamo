@@ -1956,8 +1956,8 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy126.save(Unknown Source)
-	at in.krishi.courseservice.services.CourseService.handleCourseCreationAccepted(CourseService.java:124)
-	at in.krishi.courseservice.events.EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
+	at CourseService.handleCourseCreationAccepted(CourseService.java:124)
+	at EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1976,9 +1976,9 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
-	at in.krishi.courseservice.events.EventPublisher.sendCourseEvent(EventPublisher.java:31)
-	at in.krishi.courseservice.services.CourseService.create(CourseService.java:102)
-	at in.krishi.courseservice.controllers.CourseController.create(CourseController.java:60)
+	at EventPublisher.sendCourseEvent(EventPublisher.java:31)
+	at CourseService.create(CourseService.java:102)
+	at CourseController.create(CourseController.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2160,8 +2160,8 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy126.save(Unknown Source)
-	at in.krishi.courseservice.services.CourseService.handleCourseCreationAccepted(CourseService.java:124)
-	at in.krishi.courseservice.events.EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
+	at CourseService.handleCourseCreationAccepted(CourseService.java:124)
+	at EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2180,9 +2180,9 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
-	at in.krishi.courseservice.events.EventPublisher.sendCourseEvent(EventPublisher.java:31)
-	at in.krishi.courseservice.services.CourseService.create(CourseService.java:102)
-	at in.krishi.courseservice.controllers.CourseController.create(CourseController.java:60)
+	at EventPublisher.sendCourseEvent(EventPublisher.java:31)
+	at CourseService.create(CourseService.java:102)
+	at CourseController.create(CourseController.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2342,7 +2342,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'o
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at in.krishi.courseservice.CourseserviceApplication.main(CourseserviceApplication.java:10)
+	at CourseserviceApplication.main(CourseserviceApplication.java:10)
 Caused by: com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: could not instantiate class com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedTimestamp$Converter
 	at com.amazonaws.services.dynamodbv2.datamodeling.StandardAnnotationMaps.overrideOf(StandardAnnotationMaps.java:444)
 	at com.amazonaws.services.dynamodbv2.datamodeling.StandardAnnotationMaps.access$500(StandardAnnotationMaps.java:42)
@@ -2466,7 +2466,7 @@ org.springframework.context.ApplicationContextException: Failed to start bean 'o
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at in.krishi.courseservice.CourseserviceApplication.main(CourseserviceApplication.java:10)
+	at CourseserviceApplication.main(CourseserviceApplication.java:10)
 Caused by: com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: could not instantiate class com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedTimestamp$Converter
 	at com.amazonaws.services.dynamodbv2.datamodeling.StandardAnnotationMaps.overrideOf(StandardAnnotationMaps.java:444)
 	at com.amazonaws.services.dynamodbv2.datamodeling.StandardAnnotationMaps.access$500(StandardAnnotationMaps.java:42)
@@ -3503,8 +3503,8 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy126.save(Unknown Source)
-	at in.krishi.courseservice.services.CourseService.handleCourseCreationAccepted(CourseService.java:124)
-	at in.krishi.courseservice.events.EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
+	at CourseService.handleCourseCreationAccepted(CourseService.java:124)
+	at EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -3523,9 +3523,9 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
-	at in.krishi.courseservice.events.EventPublisher.sendCourseEvent(EventPublisher.java:31)
-	at in.krishi.courseservice.services.CourseService.create(CourseService.java:102)
-	at in.krishi.courseservice.controllers.CourseController.create(CourseController.java:60)
+	at EventPublisher.sendCourseEvent(EventPublisher.java:31)
+	at CourseService.create(CourseService.java:102)
+	at CourseController.create(CourseController.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -9490,8 +9490,8 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at jdk.proxy2/jdk.proxy2.$Proxy127.save(Unknown Source)
-	at in.krishi.courseservice.services.CourseService.handleCourseCreationAccepted(CourseService.java:124)
-	at in.krishi.courseservice.events.EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
+	at CourseService.handleCourseCreationAccepted(CourseService.java:124)
+	at EventConsumer.handleCourseCreationAccepted(EventConsumer.java:90)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -9510,9 +9510,9 @@ com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMappingException: not sup
 	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:317)
 	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:272)
-	at in.krishi.courseservice.events.EventPublisher.sendCourseEvent(EventPublisher.java:31)
-	at in.krishi.courseservice.services.CourseService.create(CourseService.java:102)
-	at in.krishi.courseservice.controllers.CourseController.create(CourseController.java:60)
+	at EventPublisher.sendCourseEvent(EventPublisher.java:31)
+	at CourseService.create(CourseService.java:102)
+	at CourseController.create(CourseController.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -11590,7 +11590,7 @@ NoDefClassFoundExceptions or similar might occur!
 2023-02-12 05:59:47.751 [main] [INFO] [o.a.catalina.core.StandardEngine] - Starting Servlet engine: [Apache Tomcat/9.0.55]
 2023-02-12 05:59:47.890 [main] [INFO] [o.a.c.c.C.[Tomcat].[localhost].[/]] - Initializing Spring embedded WebApplicationContext
 2023-02-12 05:59:47.891 [main] [INFO] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 2046 ms
-2023-02-12 05:59:48.334 [main] [WARN] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseService': Unsatisfied dependency expressed through field 'courseRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'in.krishi.courseservice.repositories.CourseRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-02-12 05:59:48.334 [main] [WARN] [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseController': Unsatisfied dependency expressed through field 'courseService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'courseService': Unsatisfied dependency expressed through field 'courseRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'CourseRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2023-02-12 05:59:48.339 [main] [INFO] [o.a.catalina.core.StandardService] - Stopping service [Tomcat]
 2023-02-12 05:59:48.358 [main] [INFO] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] - 
 
@@ -11603,7 +11603,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field courseRepository in in.krishi.courseservice.services.CourseService required a bean of type 'in.krishi.courseservice.repositories.CourseRepository' that could not be found.
+Field courseRepository in CourseService required a bean of type 'CourseRepository' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -11611,7 +11611,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'in.krishi.courseservice.repositories.CourseRepository' in your configuration.
+Consider defining a bean of type 'CourseRepository' in your configuration.
 
 2023-02-12 11:39:15.023 [main] [INFO] [i.k.c.CourseserviceApplication] - Starting CourseserviceApplication using Java 16.0.2 on Senthils-MacBook-Pro-2.local with PID 14375 (/Users/senthilsivanath/Downloads/courseservice-dynamo/build/classes/java/main started by senthilsivanath in /Users/senthilsivanath/Downloads/courseservice-dynamo)
 2023-02-12 11:39:15.023 [background-preinit] [INFO] [o.h.validator.internal.util.Version] - HV000001: Hibernate Validator 6.2.0.Final
