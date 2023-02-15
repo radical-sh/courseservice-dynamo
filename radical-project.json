@@ -1,0 +1,218 @@
+{
+	"version": 2,
+	"models": {
+		"Course": {
+			"title": "Course",
+			"properties": {
+				"organizationId": {
+					"type": "string",
+					"addedTime": 1673091932897
+				},
+				"courseItems": {
+					"addedTime": 1673091862596,
+					"title": "List",
+					"$ref": "java/util/List",
+					"items": {
+						"type": "string"
+					}
+				},
+				"createdBy": {
+					"type": "string",
+					"addedTime": 1673091861577
+				},
+				"lastModifiedBy": {
+					"type": "string",
+					"addedTime": 1673091861578
+				},
+				"visibilityLevel": {
+					"addedTime": 1673091942611,
+					"type": "VisibilityLevel",
+					"$ref": "https://krishi.in/courseservice/enums/VisibilityLevel"
+				},
+				"description": {
+					"type": "string",
+					"addedTime": 1672868430491
+				},
+				"courseId": {
+					"type": "string",
+					"addedTime": 1672866977927
+				},
+				"createdOn": {
+					"format": "datetime",
+					"addedTime": 1673091861578,
+					"default": "OffsetDateTime.now().toInstant()",
+					"type": "string",
+					"defaultType": "expression"
+				},
+				"lastModifiedOn": {
+					"format": "datetime",
+					"addedTime": 1673091861578,
+					"default": "OffsetDateTime.now().toInstant()",
+					"type": "string",
+					"defaultType": "expression"
+				},
+				"tags": {
+					"addedTime": 1673091887788,
+					"title": "List",
+					"$ref": "java/util/List",
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"key": "courseId",
+			"required": [],
+			"$id": "https://krishi.in/courseservice/models/Course"
+		},
+		"CourseItem": {
+			"title": "CourseItem",
+			"properties": {
+				"contents": {
+					"type": "string",
+					"addedTime": 1673091852895
+				},
+				"createdBy": {
+					"type": "string",
+					"addedTime": 1673091859361
+				},
+				"createdOn": {
+					"format": "datetime",
+					"addedTime": 1673091859362,
+					"default": "OffsetDateTime.now().toInstant()",
+					"type": "string",
+					"defaultType": "expression"
+				},
+				"courseItemId": {
+					"type": "string",
+					"addedTime": 1673091842345
+				},
+				"lastModifiedBy": {
+					"type": "string",
+					"addedTime": 1673091859362
+				},
+				"lastModifiedOn": {
+					"format": "datetime",
+					"addedTime": 1673091859362,
+					"default": "OffsetDateTime.now().toInstant()",
+					"type": "string",
+					"defaultType": "expression"
+				}
+			},
+			"key": "courseItemId",
+			"$id": "https://krishi.in/courseservice/models/CourseItem"
+		}
+	},
+	"actions": {
+		"models": {
+			"Course": {
+				"actions": {
+					"Delete": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"path": "/{courseId}",
+						"parameters": {},
+						"enabled": true
+					},
+					"Update": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"path": "/{courseId}",
+						"parameters": {},
+						"enabled": true
+					},
+					"Create": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"eventSettings": {
+							"name": "CourseCreationAccepted",
+							"format": "json",
+							"target": "kafka"
+						},
+						"parameters": {},
+						"enabled": true
+					},
+					"Get": {
+						"apiEnabled": true,
+						"actionType": "sync",
+						"path": "/{courseId}",
+						"parameters": {},
+						"enabled": true
+					}
+				},
+				"path": "courses"
+			},
+			"CourseItem": {
+				"actions": {
+					"Delete": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"path": "/{courseItemId}",
+						"parameters": {},
+						"enabled": true
+					},
+					"Update": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"path": "/{courseItemId}",
+						"parameters": {},
+						"enabled": true
+					},
+					"Create": {
+						"apiEnabled": true,
+						"actionType": "async",
+						"parameters": {},
+						"enabled": true
+					},
+					"Get": {
+						"apiEnabled": true,
+						"actionType": "sync",
+						"path": "/{courseItemId}",
+						"parameters": {},
+						"enabled": true
+					}
+				},
+				"path": "courseitems"
+			}
+		}
+	},
+	"project": {
+		"logger": {
+			"enabled": true,
+			"appenderConfig": {
+				"consoleAppender": {
+					"enabled": true
+				},
+				"fileAppender": {
+					"enabled": true
+				}
+			}
+		},
+		"health": {
+			"dependenciesHealthEnabled": true,
+			"enabled": true
+		},
+		"unitTests": {
+			"enabled": true
+		},
+		"version": {
+			"org.springframework.boot": "2.6.0"
+		},
+		"swagger": {
+			"enabled": true
+		},
+		"organizationId": "bb4c69b7-1d9e-54dd-97a1-9fae48fde683",
+		"path": "/v2/",
+		"groupName": "in.krishi",
+		"customProperties": "",
+		"build": {
+			"tool": "gradle"
+		},
+		"namespaceId": "35876d23-770c-5e21-b11c-c2bbc6944d07",
+		"packageName": "in.krishi.courseservice",
+		"projectName": "courseservice",
+		"projectId": "35238033-e971-4dfb-a572-0c02ceb7c560"
+	},
+	"config": {
+		"customProperties": ""
+	}
+}
